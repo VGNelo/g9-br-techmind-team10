@@ -23,3 +23,11 @@ class LoginControllerTest {
                 .andExpect(status().isOk());
     }
 }
+    @Test
+    void deveRetornar404SeUsuarioNaoExiste() throws Exception {
+        String json = "{\"email\":\"naoexiste@teste.com\", \"senha\":\"123456\"}";
+        mockMvc.perform(post("/login")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(json))
+                .andExpect(status().isNotFound());
+}
