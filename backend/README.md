@@ -19,7 +19,7 @@ API REST responsável pela autenticação e serviços core do projeto TechMind, 
 ```bash
 git clone https://github.com/VGNelo/g9-br-techmind-team10.git
 cd g9-br-techmind-team10/backend
-./gradlew bootRun
+./gradlew bootRun 
 A API estará disponível em http://localhost:8080.
 
 4. Pipeline CI/CD
